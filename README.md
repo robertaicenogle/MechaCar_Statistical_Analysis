@@ -1,14 +1,14 @@
 # MechaCar_Statistical_Analysis
 
 ## Project Overview
-This project involves the use of 
+This project involves the use of R and R Studio to perform statistical analysis - summary statistics, linear regression, T test - to assess vehicle performance based on multiple criteria.
 
 ## Resources
-- Data Source:
-- Software:
+- Data Source: 
+- Software: R, R Studio
 
 
-## Deliverable 1
+## Linear Regression to Predict MPG
 
 formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD
 
@@ -51,9 +51,22 @@ Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
+Pr(>|t|) values represent the probability that each coefficient contributes a random amount of variance to the linear model. Based on the data, vehicle length and ground clearance (and Intercept) provide a non-random amount of variance to the linear model of mpg.
+
+Based on the results, slope of the linear model is not zero.
+
+The multi-linear model is as follows:
+mpg = 6.27 * vehicle_length + 1.25e-3 * vehicle_weigth + 6.88e-2 * spoiler_angle -3.41 * AWD + 3.55 * ground_clearance - 1.04e+2
+
+This can be approximated to: mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * ground_clearance - 104
+
+R-square is 0.7140. Based on this data, approxmiately 71% of the variations in mpg are explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain and the ground clearance. This linear model as fairly efficient in predicting mpg of MechaCar prototypes.
+
 ## Deliverable 2: Read Suspension Coil File
 
-### Summary Statistics
+The current manufacturing data must meet the design specification (not to exceed 100 lbs per square inch) for all manufacturing lots in total and each lot individually. Based on the data/charts below, ehe design specs are true for all manufacturing lots in total. The global variance of 62.3 psi.
+On the lot level, Lot 1 and Lot 2 are into specs with respectively variances of 0.98 and 7.5 psi. The Lot 3 is out of specs with a variance of 170.3 psi.
+
 ### total_summary Mean=mean(PSI),Median=(PSI),Variance=var(PSI),SD=sd(PSI)
 
 ![](total_summary.PNG)
