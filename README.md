@@ -62,10 +62,10 @@ This can be approximated to: mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * g
 
 R-square is 0.7140. Based on this data, approxmiately 71% of the variations in mpg are explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain and the ground clearance. This linear model as fairly efficient in predicting mpg of MechaCar prototypes.
 
-## Deliverable 2: Read Suspension Coil File
+## Summary Statistics on Suspension Coils
 
 The current manufacturing data must meet the design specification (not to exceed 100 lbs per square inch) for all manufacturing lots in total and each lot individually. Based on the data/charts below, ehe design specs are true for all manufacturing lots in total. The global variance of 62.3 psi.
-On the lot level, Lot 1 and Lot 2 are into specs with respectively variances of 0.98 and 7.5 psi. The Lot 3 is out of specs with a variance of 170.3 psi.
+On the lot level, Lot 1 and Lot 2 are within specification range. However, Lot 3 specifically, is out of specification range. PSI exceeds limitation.
 
 ### total_summary Mean=mean(PSI),Median=(PSI),Variance=var(PSI),SD=sd(PSI)
 
@@ -75,7 +75,7 @@ On the lot level, Lot 1 and Lot 2 are into specs with respectively variances of 
 
 ![](lot_summary.PNG)
 
-## Deliverable 3
+## T-Test on Suspension Coils
 
 	One Sample t-test
 
@@ -87,6 +87,10 @@ alternative hypothesis: true mean is not equal to 1500
 sample estimates:
 mean of x 
   1498.78 
+
+Significance level is 0.05. This studies p-value 0.06028 which is above the significance level. Therefore, we do not reject the null hypothesis. The PSI across all manufacturing lots is statiscally similar to the population mean of 1498.78 psi.
+
+For the data below, do not reject the null on lots 1 and 2. Reject the null hypothesis on lot 3 (p-value 0.04168)
 
 ### T-test on Lot 1
 t = 0, df = 49, p-value = 1
@@ -119,4 +123,8 @@ mean of x
 ## Deliverable 4: Design a Study Comparing the MechaCar to the Competition
 
 ### MechaCar Design Study
-The average car buyer will look not only at design/appearance, but will look at cost and fuel efficiency. By assessing these metrics, MechaCar can succeed against the competition. For fuel efficiency, an ANOVA tests could be used to compare the means of a continuous numerical variable across a number of groups. A one-way ANOVA could be used to test against multiple groups - such as fuel efficiency of different cars based on vehicle type. In this test, the null hypotheses is that there is no difference among the means of mpg of all groups. The alternate hypotheses is that at least one of the means is different from all other groups. To compare the cost of among competitors we could perform ANOVA test. For this test, the null hypotheses is that there is no difference among means of costs of all groups. The alternate hypotheses is that at least one of the means is different from all other groups.
+The average car buyer will look not only at design/appearance, but will look at closely at cost and fuel efficiency. By assessing these metrics, MechaCar can succeed against the competition. To perform these tests, the data for MechaCars and it's competitors is needed.
+
+For fuel efficiency, an ANOVA tests could be used to compare the means of a continuous numerical variable across a number of groups. A one-way ANOVA could be used to test against multiple groups - such as fuel efficiency of different cars based on vehicle type. In this test, the null hypotheses is that there is no difference among the means of mpg of all groups. The alternate hypotheses is that at least one of the means is different from all other groups.
+
+To compare the cost of among competitors we could perform ANOVA test. For this test, the null hypotheses is that there is no difference among means of costs of all groups. The alternate hypotheses is that at least one of the means is different from all other groups.
