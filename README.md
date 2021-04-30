@@ -1,5 +1,13 @@
 # MechaCar_Statistical_Analysis
 
+## Project Overview
+This project involves the use of 
+
+## Resources
+- Data Source:
+- Software:
+
+
 ## Deliverable 1
 
 formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD
